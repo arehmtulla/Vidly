@@ -1,0 +1,37 @@
+﻿@model ICollection<Vidly.Models.Customer>
+
+
+@{
+    ViewBag.Title = "AllCustomers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>AllCustomers</h2>
+
+@if (Model.Count == 0)
+{
+    <p>There are no customers yet.</p>
+}   
+else
+{
+    <table class="table table-bordered table-hover">
+        <tr>
+            <th>
+                Names
+            </th>
+        </tr>
+
+        @foreach (var customer in Model)
+        {
+            <tr>
+                <td>
+
+                    @Html.ActionLink(customer.Name, "Customer", "Customers", new { name = "Bob", id = 3 }, null)
+
+                </td>
+            </tr>
+        }
+
+    </table>
+}
+
