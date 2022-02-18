@@ -143,6 +143,10 @@
     <Compile Include="Migrations\202202181311356_SeedingData.designer.cs">
       <DependentUpon>202202181311356_SeedingData.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202202181335130_EditMembershipTypes.cs" />
+    <Compile Include="Migrations\202202181335130_EditMembershipTypes.designer.cs">
+      <DependentUpon>202202181335130_EditMembershipTypes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model1.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -218,6 +222,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202202181311356_SeedingData.resx">
       <DependentUpon>202202181311356_SeedingData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202202181335130_EditMembershipTypes.resx">
+      <DependentUpon>202202181335130_EditMembershipTypes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
