@@ -1,27 +1,29 @@
-﻿using System.Data.Entity;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Web.Mvc;
+using Vidly.Models;
+
 namespace Vidly.Controllers
 {
     public class CustomersController : Controller
     {
         // GET: Customers
-        private Model1 db = new Model1();
 
         public ActionResult AllCustomers()
         {
 
-            var customers = db.Customers.Include(c => c.MembershipType).ToList();
-
+            var customers = new List<Customer>()
+            {
+                new Customer { Id = 1, Name = "Abdul"},
+                new Customer { Id = 2, Name = "Mary"}
+            };
             return View(customers);
         }
 
-        public ActionResult Customer(int id)
+
+        public ActionResult Customer(int id, string name)
         {
-            var customer = db.Customers.Include(c => c.MembershipType).SingleOrDefault(c => c.Id == id);
+            var customer = new Customer { Id = id, Name = name };
             return View(customer);
         }
-
-
     }
 }

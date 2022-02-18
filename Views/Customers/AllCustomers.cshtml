@@ -19,20 +19,15 @@ else
             <th>
                 Names
             </th>
-            <th>
-                Membership Type
-            </th>
         </tr>
 
         @foreach (var customer in Model)
         {
             <tr>
                 <td>
-                    @Html.ActionLink(customer.Name, "Customer", "Customers", new {  id = customer.Id }, null)
-                </td>
 
-                <td>
-                    @customer.MembershipType.Name
+                    @Html.ActionLink(customer.Name, "Customer", "Customers", new { name = "Bob", id = 3 }, null)
+
                 </td>
             </tr>
         }

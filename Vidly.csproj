@@ -132,6 +132,7 @@
     <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MoviesController.cs" />
+    <Compile Include="DAL\VidlyContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -139,46 +140,9 @@
     <Compile Include="Migrations\202202180744475_InitialModel.designer.cs">
       <DependentUpon>202202180744475_InitialModel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202202180757259_AddIsSubscribedToCustomer.cs" />
-    <Compile Include="Migrations\202202180757259_AddIsSubscribedToCustomer.designer.cs">
-      <DependentUpon>202202180757259_AddIsSubscribedToCustomer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202202181042251_AddBirthdateToCustomer.cs" />
-    <Compile Include="Migrations\202202181042251_AddBirthdateToCustomer.designer.cs">
-      <DependentUpon>202202181042251_AddBirthdateToCustomer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202202181043236_SeedCustomerBirthdate.cs" />
-    <Compile Include="Migrations\202202181043236_SeedCustomerBirthdate.designer.cs">
-      <DependentUpon>202202181043236_SeedCustomerBirthdate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202202181059201_AddMovieDetails.cs" />
-    <Compile Include="Migrations\202202181059201_AddMovieDetails.designer.cs">
-      <DependentUpon>202202181059201_AddMovieDetails.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202202181122339_SeedMovieDetails3.cs" />
-    <Compile Include="Migrations\202202181122339_SeedMovieDetails3.designer.cs">
-      <DependentUpon>202202181122339_SeedMovieDetails3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202202181148409_FixMovieDetails.cs" />
-    <Compile Include="Migrations\202202181148409_FixMovieDetails.designer.cs">
-      <DependentUpon>202202181148409_FixMovieDetails.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202202181159373_FixMovieDetails1.cs" />
-    <Compile Include="Migrations\202202181159373_FixMovieDetails1.designer.cs">
-      <DependentUpon>202202181159373_FixMovieDetails1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202202181200593_FixMovieDetails2.cs" />
-    <Compile Include="Migrations\202202181200593_FixMovieDetails2.designer.cs">
-      <DependentUpon>202202181200593_FixMovieDetails2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202202181209571_FixMovies.cs" />
-    <Compile Include="Migrations\202202181209571_FixMovies.designer.cs">
-      <DependentUpon>202202181209571_FixMovies.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model1.cs" />
     <Compile Include="Models\Customer.cs" />
-    <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\RandomMovieViewModel.cs" />
@@ -247,33 +211,6 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202202180744475_InitialModel.resx">
       <DependentUpon>202202180744475_InitialModel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202202180757259_AddIsSubscribedToCustomer.resx">
-      <DependentUpon>202202180757259_AddIsSubscribedToCustomer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202202181042251_AddBirthdateToCustomer.resx">
-      <DependentUpon>202202181042251_AddBirthdateToCustomer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202202181043236_SeedCustomerBirthdate.resx">
-      <DependentUpon>202202181043236_SeedCustomerBirthdate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202202181059201_AddMovieDetails.resx">
-      <DependentUpon>202202181059201_AddMovieDetails.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202202181122339_SeedMovieDetails3.resx">
-      <DependentUpon>202202181122339_SeedMovieDetails3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202202181148409_FixMovieDetails.resx">
-      <DependentUpon>202202181148409_FixMovieDetails.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202202181159373_FixMovieDetails1.resx">
-      <DependentUpon>202202181159373_FixMovieDetails1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202202181200593_FixMovieDetails2.resx">
-      <DependentUpon>202202181200593_FixMovieDetails2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202202181209571_FixMovies.resx">
-      <DependentUpon>202202181209571_FixMovies.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
