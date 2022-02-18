@@ -9,14 +9,17 @@
 <table class="table table-hover">
     <tr>
         <th>
-            Movies
+            Title
+        </th>
+        <th>
+
         </th>
     </tr>`
 
     @foreach (var movie in Model)
             {
                 <tr>
-                    <td>movie.Name</td>
+                    <td>@movie.Name</td>
                 </tr>
             }
 </table>
