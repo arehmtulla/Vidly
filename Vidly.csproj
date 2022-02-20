@@ -136,6 +136,20 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+
+    <Compile Include="Migrations\202202181304336_InitialMigration.cs" />
+    <Compile Include="Migrations\202202181304336_InitialMigration.designer.cs">
+      <DependentUpon>202202181304336_InitialMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202202181311356_SeedingData.cs" />
+    <Compile Include="Migrations\202202181311356_SeedingData.designer.cs">
+      <DependentUpon>202202181311356_SeedingData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202202181335130_EditMembershipTypes.cs" />
+    <Compile Include="Migrations\202202181335130_EditMembershipTypes.designer.cs">
+      <DependentUpon>202202181335130_EditMembershipTypes.cs</DependentUpon>
+    </Compile>
+
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model1.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -144,9 +158,9 @@
     <Compile Include="ViewModels\RandomMovieViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Vidly.mdf" />
-    <Content Include="App_Data\Vidly_log.ldf">
-      <DependentUpon>Vidly.mdf</DependentUpon>
+    <Content Include="App_Data\Fresh.mdf" />
+    <Content Include="App_Data\Fresh_log.ldf">
+      <DependentUpon>Fresh.mdf</DependentUpon>
     </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -204,6 +218,19 @@
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202202181304336_InitialMigration.resx">
+      <DependentUpon>202202181304336_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202202181311356_SeedingData.resx">
+      <DependentUpon>202202181311356_SeedingData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202202181335130_EditMembershipTypes.resx">
+      <DependentUpon>202202181335130_EditMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
