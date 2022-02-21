@@ -12,15 +12,19 @@
             Title
         </th>
         <th>
-
+            Genre
         </th>
     </tr>`
 
     @foreach (var movie in Model)
             {
                 <tr>
-                    <td>@movie.Name</td>
+                    <td>
+                        @Html.ActionLink(movie.Name, "Details", new {id = movie.Id})
+                    </td>
+                    <td>@movie.Genre</td>
                 </tr>
+
             }
 </table>
 

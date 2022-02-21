@@ -4,6 +4,7 @@ using System.Web.Mvc;
 using Vidly.Models;
 using Vidly.ViewModels;
 
+
 namespace Vidly.Controllers
 {
     public class MoviesController : Controller
@@ -39,10 +40,10 @@ namespace Vidly.Controllers
         }
 
 
-        public ActionResult Details()
+        public ActionResult Details(int id)
         {
-
-            return View();
+            var movie = db.Movies.SingleOrDefault(x => x.Id == id);
+            return View(movie);
         }
 
 
