@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web.Mvc;
 using Vidly.Models;
@@ -34,7 +35,7 @@ namespace Vidly.Controllers
 
         public ActionResult AllMovies()
         {
-            var movies = db.Movies.ToList();
+            var movies = db.Movies.Include(m => m.Genre).ToList();
 
             return View(movies);
         }
@@ -46,6 +47,56 @@ namespace Vidly.Controllers
             return View(movie);
         }
 
+        public ActionResult New()
+        {
+            var genres = db.Genres.ToList();
+
+            var viewModel = new FormMovieViewModel()
+            {
+                Genres = genres
+            };
+
+            return View("MovieForm", viewModel);
+        }
+
+        public ActionResult Edit(int id)
+        {
+            var movie = db.Movies.SingleOrDefault(x => x.Id == id);
+
+            if (movie == null)
+            {
+                return HttpNotFound();
+            }
+
+            var viewModel = new FormMovieViewModel()
+            {
+                Movie = movie,
+                Genres = db.Genres.ToList()
+            };
+            return View("MovieForm", viewModel);
+        }
+
+        [HttpPost]
+        public ActionResult Save(Movie movie)
+        {
+            if (movie.Id == 0)
+            {
+                db.Movies.Add(movie);
+            }
+            else
+            {
+                var movieInDb = db.Movies.Single(x => x.Id == movie.Id);
+
+                movieInDb.Name = movie.Name;
+                movieInDb.NumberInStock = movie.NumberInStock;
+                movieInDb.ReleaseDate = movie.ReleaseDate;
+                movieInDb.GenreId = movie.GenreId;
+            }
+
+            db.SaveChanges();
+
+            return RedirectToAction("AllMovies", "Movies");
+        }
 
     }
 }
