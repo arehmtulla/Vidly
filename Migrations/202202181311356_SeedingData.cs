@@ -22,13 +22,13 @@
 
             //context.Movies.AddRange(movies);
 
-            IList<Customer> customers = new List<Customer>() {
-                new Customer() {Name = "Abdul Rahman", Birthdate="17/01/1996", IsSubscribedToNewsLetter=false, MembershipTypeId=1 },
-                new Customer() {Name = "Ben Geoffrey", Birthdate="17/01/1986", IsSubscribedToNewsLetter=false, MembershipTypeId=3 },
-                new Customer() {Name = "James Oslem", Birthdate="17/01/1999", IsSubscribedToNewsLetter=true, MembershipTypeId=2 },
-                 };
+            //IList<Customer> customers = new List<Customer>() {
+            //    new Customer() {Name = "Abdul Rahman", Birthdate="17/01/1996", IsSubscribedToNewsLetter=false, MembershipTypeId=1 },
+            //    new Customer() {Name = "Ben Geoffrey", Birthdate="17/01/1986", IsSubscribedToNewsLetter=false, MembershipTypeId=3 },
+            //    new Customer() {Name = "James Oslem", Birthdate="17/01/1999", IsSubscribedToNewsLetter=true, MembershipTypeId=2 },
+            //     };
 
-            context.Customers.AddRange(customers);
+            //context.Customers.AddRange(customers);
 
             IList<MembershipType> membershipTypes = new List<MembershipType>() {
                 new MembershipType() {Name = "Pay As You Go", Id = 1, DiscountRate = 0, DurationInMonths=0, SignUpFee= 0},

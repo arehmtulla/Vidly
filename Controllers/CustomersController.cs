@@ -32,7 +32,7 @@ namespace Vidly.Controllers
             var viewModel = new FormCustomerViewModel()
             {
                 MembershipTypes = membershipTypes,
-
+                Customer = new Customer()
             };
             return View("CustomerForm", viewModel);
         }
@@ -40,6 +40,18 @@ namespace Vidly.Controllers
         [HttpPost]
         public ActionResult Save(Customer customer)
         {
+
+            if (!ModelState.IsValid)
+            {
+                var viewModel = new FormCustomerViewModel()
+                {
+                    Customer = customer,
+                    MembershipTypes = db.MembershipTypes.ToList()
+                };
+                return View("CustomerForm", viewModel);
+            }
+
+
             if (customer.Id == 0)
             {
                 db.Customers.Add(customer);
