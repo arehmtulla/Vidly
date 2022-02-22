@@ -163,6 +163,14 @@
     <Compile Include="Migrations\202202211108534_FixCustomerBirthdate.designer.cs">
       <DependentUpon>202202211108534_FixCustomerBirthdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202202220438466_ChangedMovieModel.cs" />
+    <Compile Include="Migrations\202202220438466_ChangedMovieModel.designer.cs">
+      <DependentUpon>202202220438466_ChangedMovieModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202202220449225_ModifiedMovieModel.cs" />
+    <Compile Include="Migrations\202202220449225_ModifiedMovieModel.designer.cs">
+      <DependentUpon>202202220449225_ModifiedMovieModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model1.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -260,6 +268,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202202211108534_FixCustomerBirthdate.resx">
       <DependentUpon>202202211108534_FixCustomerBirthdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202202220438466_ChangedMovieModel.resx">
+      <DependentUpon>202202220438466_ChangedMovieModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202202220449225_ModifiedMovieModel.resx">
+      <DependentUpon>202202220449225_ModifiedMovieModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
