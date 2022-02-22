@@ -53,7 +53,6 @@ namespace Vidly.Controllers
 
             var viewModel = new FormMovieViewModel()
             {
-                Movie = new Movie(),
                 Genres = genres
             };
 
@@ -69,9 +68,8 @@ namespace Vidly.Controllers
                 return HttpNotFound();
             }
 
-            var viewModel = new FormMovieViewModel()
+            var viewModel = new FormMovieViewModel(movie)
             {
-                Movie = movie,
                 Genres = db.Genres.ToList()
             };
             return View("MovieForm", viewModel);
@@ -84,9 +82,9 @@ namespace Vidly.Controllers
 
             if (!ModelState.IsValid)
             {
-                var viewModel = new FormMovieViewModel()
+                var viewModel = new FormMovieViewModel(movie)
                 {
-                    Movie = movie,
+
                     Genres = db.Genres.ToList(),
                 };
                 return View("MovieForm", viewModel);
