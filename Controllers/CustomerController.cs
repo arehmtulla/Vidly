@@ -6,7 +6,7 @@ using Vidly.ViewModels;
 
 namespace Vidly.Controllers
 {
-    public class CustomersController : Controller
+    public class CustomerController : Controller
     {
         // GET: Customers
         private Model1 db = new Model1();
