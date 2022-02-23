@@ -6,7 +6,7 @@ using Vidly.ViewModels;
 
 namespace Vidly.Controllers
 {
-    public class CustomerController : Controller
+    public class CustomersController : Controller
     {
         // GET: Customers
         private Model1 db = new Model1();
@@ -14,9 +14,8 @@ namespace Vidly.Controllers
         public ActionResult AllCustomers()
         {
 
-            var customers = db.Customers.Include(c => c.MembershipType).ToList();
 
-            return View(customers);
+            return View();
         }
 
         public ActionResult Customer(int id)
