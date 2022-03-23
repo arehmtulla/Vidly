@@ -7,9 +7,11 @@ jobs:
     - name: executing remote ssh commands using password
       uses: appleboy/ssh-action@master
       with:
-        host: 54.184.44.174
-        username: Administrator
-        password: YNUdP4AMCYNzG4ETBB62XWCBruzkcV
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
         script: |
+          mkdir vidlytest
+          cd ./vidlytest
           git clone https://github.com/arehmtulla/Vidly
       
