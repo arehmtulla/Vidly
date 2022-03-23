@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using System;
+using System.Collections.Generic;
 using System.Data.Entity;
 
 using System.Linq;
@@ -15,13 +16,18 @@ namespace Vidly.Controllers.API
         private Model1 db = new Model1();
 
         //GET /api/movies
-        public IHttpActionResult GetMovies()
+        public IEnumerable<MovieDTO> GetMovies(string query = null)
         {
-            var movieDtos = db.Movies
-                .Include(x => x.Genre)
+            var moviesQuery = db.Movies
+                .Include(m => m.Genre)
+                .Where(m => m.AvailableStock > 0);
+
+            if (!String.IsNullOrWhiteSpace(query))
+                moviesQuery = moviesQuery.Where(m => m.Name.Contains(query));
+
+            return moviesQuery
                 .ToList()
                 .Select(Mapper.Map<Movie, MovieDTO>);
-            return Ok(movieDtos);
         }
 
         //GET /api/movies/:id
