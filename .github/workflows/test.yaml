@@ -12,4 +12,6 @@ jobs:
         password: YNUdP4AMCYNzG4ETBB62XWCBruzkcV
         script: |
           mkdir vidlytest
+          cd ./vidlytest
+          git clone https://github.com/arehmtulla/Vidly
       
