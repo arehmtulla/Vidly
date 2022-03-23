@@ -11,7 +11,7 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         script: |
-          mkdir -p vidlytest
+          mkdir vidlytest
           cd ./vidlytest
           pwd
           # git clone https://github.com/arehmtulla/Vidly/
