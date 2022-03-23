@@ -12,4 +12,4 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         script: |
           git clone https://github.com/arehmtulla/Vidly
-      
+          echo "testing"
