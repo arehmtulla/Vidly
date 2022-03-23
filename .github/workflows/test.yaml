@@ -11,6 +11,5 @@ jobs:
         username: Administrator
         password: YNUdP4AMCYNzG4ETBB62XWCBruzkcV
         script: |
-          cd Desktop
-          git clone https://github.com/arehmtulla/Vidly.git
+          mkdir vidlytest
       
