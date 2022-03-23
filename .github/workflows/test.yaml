@@ -14,4 +14,4 @@ jobs:
           mkdir vidlytest
           cd ./vidlytest
           pwd
-          git clone https://github.com/arehmtulla/Vidly/
+          # git clone https://github.com/arehmtulla/Vidly/
