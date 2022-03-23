@@ -10,5 +10,7 @@ jobs:
         host: 54.184.44.174
         username: Administrator
         password: YNUdP4AMCYNzG4ETBB62XWCBruzkcV
-        script: ls
+        script: |
+          cd Desktop
+          git clone https://github.com/arehmtulla/Vidly.git
       
