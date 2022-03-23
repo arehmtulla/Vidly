@@ -11,5 +11,4 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         script: |
-          mkdir vidlytest & cd ./vidlytest & git clone https://github.com/arehmtulla/Vidly
-      
+          mkdir vidlytest & cd ./vidlytest & git clone https://github.com/arehmtulla/Vidly/
