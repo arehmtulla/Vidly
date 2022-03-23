@@ -1,7 +1,7 @@
 name: test-github-actions
 on: [push]
 jobs:
-  ssh-into-ami
+  ssh-into-ami:
     runs-on: ubuntu-latest
     steps:
     - name: executing remote ssh commands using password
