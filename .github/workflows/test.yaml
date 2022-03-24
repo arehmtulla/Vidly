@@ -11,5 +11,5 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         script: |
-          mkdir vidlytest && cd ./vidlytest && git clone https://github.com/arehmtulla/Vidly/
+          mkdir -p vidlytest && cd ./vidlytest && git clone https://github.com/arehmtulla/Vidly/ && cd ./Vidly && nuget restore && msbuild
           echo hello
