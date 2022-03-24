@@ -22,5 +22,5 @@ jobs:
           SSH_HOST: ${{ secrets.HOST }}
 
       - name: Connect via ssh
-        run: ssh staging
+        run: ssh staging 'ls'
 
