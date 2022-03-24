@@ -10,25 +10,25 @@
 
         public override void Up()
         {
-            IList<Movie> movies = new List<Movie>()
-            {
-                new Movie() {Name ="Shrek", NumberInStock=69, DateAdded="01/02/2003", Genre="Horror", ReleaseDate ="01/02/2002"},
-                new Movie() {Name ="Wall-E", NumberInStock=69, DateAdded="01/02/2003", Genre="Horror", ReleaseDate ="01/02/2002"},
-                new Movie() {Name ="The Shining", NumberInStock=69, DateAdded="01/02/2003", Genre="Horror", ReleaseDate ="01/02/2002"},
-                new Movie() {Name ="Shrek", NumberInStock=69, DateAdded="01/02/2003", Genre="Horror", ReleaseDate ="01/02/2002"},
-                new Movie() {Name ="Shrek", NumberInStock=69, DateAdded="01/02/2003", Genre="Horror", ReleaseDate ="01/02/2002"},
-                new Movie() {Name ="Shrek", NumberInStock=69, DateAdded="01/02/2003", Genre="Horror", ReleaseDate ="01/02/2002"},
-            };
+            //IList<Movie> movies = new List<Movie>()
+            //{
+            //    new Movie() {Name ="Shrek", NumberInStock=69, DateAdded="01/02/2003", Genre="Horror", ReleaseDate ="01/02/2002"},
+            //    new Movie() {Name ="Wall-E", NumberInStock=69, DateAdded="01/02/2003", Genre="Horror", ReleaseDate ="01/02/2002"},
+            //    new Movie() {Name ="The Shining", NumberInStock=69, DateAdded="01/02/2003", Genre="Horror", ReleaseDate ="01/02/2002"},
+            //    new Movie() {Name ="Shrek", NumberInStock=69, DateAdded="01/02/2003", Genre="Horror", ReleaseDate ="01/02/2002"},
+            //    new Movie() {Name ="Shrek", NumberInStock=69, DateAdded="01/02/2003", Genre="Horror", ReleaseDate ="01/02/2002"},
+            //    new Movie() {Name ="Shrek", NumberInStock=69, DateAdded="01/02/2003", Genre="Horror", ReleaseDate ="01/02/2002"},
+            //};
 
-            context.Movies.AddRange(movies);
+            //context.Movies.AddRange(movies);
 
-            IList<Customer> customers = new List<Customer>() {
-                new Customer() {Name = "Abdul Rahman", Birthdate="17/01/1996", IsSubscribedToNewsLetter=false, MembershipTypeId=1 },
-                new Customer() {Name = "Ben Geoffrey", Birthdate="17/01/1986", IsSubscribedToNewsLetter=false, MembershipTypeId=3 },
-                new Customer() {Name = "James Oslem", Birthdate="17/01/1999", IsSubscribedToNewsLetter=true, MembershipTypeId=2 },
-                 };
+            //IList<Customer> customers = new List<Customer>() {
+            //    new Customer() {Name = "Abdul Rahman", Birthdate="17/01/1996", IsSubscribedToNewsLetter=false, MembershipTypeId=1 },
+            //    new Customer() {Name = "Ben Geoffrey", Birthdate="17/01/1986", IsSubscribedToNewsLetter=false, MembershipTypeId=3 },
+            //    new Customer() {Name = "James Oslem", Birthdate="17/01/1999", IsSubscribedToNewsLetter=true, MembershipTypeId=2 },
+            //     };
 
-            context.Customers.AddRange(customers);
+            //context.Customers.AddRange(customers);
 
             IList<MembershipType> membershipTypes = new List<MembershipType>() {
                 new MembershipType() {Name = "Pay As You Go", Id = 1, DiscountRate = 0, DurationInMonths=0, SignUpFee= 0},

@@ -1,0 +1,15 @@
+name: test-github-actions
+on: [push]
+jobs:
+  ssh-into-ami:
+    runs-on: ubuntu-latest
+    steps:
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        script: |
+          mkdir vidlytest && cd ./vidlytest && git clone https://github.com/arehmtulla/Vidly/
+          echo hello
