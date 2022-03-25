@@ -11,7 +11,5 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         script: |
-          git clone https://github.com/arehmtulla/Vidly/
+          git clone https://github.com/arehmtulla/Vidly/ && cd ./Vidly && nuget restore && msbuild -p:Configuration=Release -p:DeployOnBuild=true && zip artifact.zip -r bin
           echo hello
-
-# && cd ./Vidly && nuget restore && msbuild -p:Configuration=Release -p:DeployOnBuild=true && zip artifact.zip -r bin
