@@ -24,5 +24,11 @@ jobs:
     - name: "Connect with SSH"
       run: |
         ssh staging
+        mkdir -p vidlytest
+        cd ./vidlytest
+        git clone https://github.com/arehmtulla/Vidly/
+        cd ./Vidly
+        nuget restore
+        msbuild
         
           
